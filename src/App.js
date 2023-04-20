@@ -4,17 +4,31 @@ import ThirdComoponent,{SecondComoponent,FirstComoponent} from './components';
 import Login from './components/classComponent';
 import Header from './components/header';
 import Child1 from './components/child1';
-import { createContext } from 'react';
+import { createContext, useEffect, useState } from 'react';
+import LearnUseeffect from './components/useEffect';
+import Child2 from './components/child2';
 
 const data1=createContext();
 const data2=createContext();
 
 function App() {
-  const obj={
+  const [obj,setObj]=useState({
     name:"John doe",
     age:12
-  }
+  })
+ 
+  // useEffect(()=>{
+   
+  //   setObj({name:"Ajay"})
 
+  // },[obj])
+
+  
+   setTimeout(()=>{
+    setObj({name:"Ajay"})
+    },5000)
+
+  console.log(obj?.name)
   const address="123,park street, California"
 
   return (
@@ -24,11 +38,15 @@ function App() {
       {/* <Login/> */}
       {/* <ThirdComoponent/> */}
       {/* <Header/> */}
-      <data2.Provider value={address}>
+      {/* <data2.Provider value={address}>
       <data1.Provider value={obj}>  
       <Child1/>
       </data1.Provider>
-      </data2.Provider>
+      </data2.Provider> */}
+      {/* <Child1 name={obj?.name} age={obj?.age}/>
+      <Child2 name={obj?.name}/> */}
+
+      <LearnUseeffect/>
       
     </div>
   );
