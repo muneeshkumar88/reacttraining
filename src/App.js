@@ -7,6 +7,8 @@ import Child1 from './components/child1';
 import { createContext, useEffect, useState } from 'react';
 import LearnUseeffect from './components/useEffect';
 import Child2 from './components/child2';
+import LoginForm from './components/loginForm';
+import BasicForm from './components/loginForm/formik';
 
 const data1=createContext();
 const data2=createContext();
@@ -28,7 +30,6 @@ function App() {
     setObj({name:"Ajay"})
     },5000)
 
-  console.log(obj?.name)
   const address="123,park street, California"
 
   return (
@@ -46,8 +47,10 @@ function App() {
       {/* <Child1 name={obj?.name} age={obj?.age}/>
       <Child2 name={obj?.name}/> */}
 
-      <LearnUseeffect/>
-      
+      {/* <LearnUseeffect/> */}
+
+      {/* <LoginForm/> */}
+<BasicForm/>      
     </div>
   );
 }
