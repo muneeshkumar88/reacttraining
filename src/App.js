@@ -13,6 +13,7 @@ import Child2 from "./components/child2";
 import LoginForm from "./components/loginForm";
 import BasicForm from "./components/loginForm/formik";
 import Signup from "./components/mSignup";
+import ClassicSignup from "./components/mSignup/classicSignup";
 
 const data1 = createContext();
 const data2 = createContext();
@@ -54,7 +55,9 @@ function App() {
 
       {/* <LoginForm/> */}
       {/* <BasicForm /> */}
-      <Signup />
+      {/* <Signup /> */}
+
+      <ClassicSignup />
     </div>
   );
 }
