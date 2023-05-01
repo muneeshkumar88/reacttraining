@@ -50,13 +50,11 @@ function App() {
       </data2.Provider> */}
       {/* <Child1 name={obj?.name} age={obj?.age}/>
       <Child2 name={obj?.name}/> */}
-
       {/* <LearnUseeffect/> */}
-
       {/* <LoginForm/> */}
       {/* <BasicForm /> */}
       {/* <Signup /> */}
-
+      <BasicForm />
       <ClassicSignup />
     </div>
   );
