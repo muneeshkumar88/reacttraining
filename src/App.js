@@ -14,6 +14,10 @@ import LoginForm from "./components/loginForm";
 import BasicForm from "./components/loginForm/formik";
 import Signup from "./components/mSignup";
 import ClassicSignup from "./components/mSignup/classicSignup";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./components/home";
+import AboutUs from "./components/aboutUs";
+import ContactUs from "./components/contactUs";
 
 const data1 = createContext();
 const data2 = createContext();
@@ -54,8 +58,16 @@ function App() {
       {/* <LoginForm/> */}
       {/* <BasicForm /> */}
       {/* <Signup /> */}
-      <BasicForm />
-      <ClassicSignup />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/home" element={<Home />}></Route>
+          <Route path="/about-us" element={<AboutUs />}></Route>
+          <Route path="/contact-us" element={<ContactUs />}></Route>
+        </Routes>
+      </BrowserRouter>
+      {/* <BasicForm />
+      <ClassicSignup /> */}
     </div>
   );
 }
